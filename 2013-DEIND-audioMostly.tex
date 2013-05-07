@@ -1,204 +1,198 @@
-% THIS IS SIGPROC-SP.TEX - VERSION 3.1
-% WORKS WITH V3.2SP OF ACM_PROC_ARTICLE-SP.CLS
-% APRIL 2009
-%
-% It is an example file showing how to use the 'acm_proc_article-sp.cls' V3.2SP
-% LaTeX2e document class file for Conference Proceedings submissions.
-% ----------------------------------------------------------------------------------------------------------------
-% This .tex file (and associated .cls V3.2SP) *DOES NOT* produce:
-%       1) The Permission Statement
-%       2) The Conference (location) Info information
-%       3) The Copyright Line with ACM data
-%       4) Page numbering
-% ---------------------------------------------------------------------------------------------------------------
-% It is an example which *does* use the .bib file (from which the .bbl file
-% is produced).
-% REMEMBER HOWEVER: After having produced the .bbl file,
-% and prior to final submission,
-% you need to 'insert'  your .bbl file into your source .tex file so as to provide
-% ONE 'self-contained' source file.
-%
-% Questions regarding SIGS should be sent to
-% Adrienne Griscti ---> griscti@acm.org
-%
-% Questions/suggestions regarding the guidelines, .tex and .cls files, etc. to
-% Gerald Murray ---> murray@hq.acm.org
-%
-% For tracking purposes - this is V3.1SP - APRIL 2009
+% CHI Extended Abstracts template.\include{2013-DEIND-audioMostly.tex}
+% Tested with XeTeX on Mac OS X (Get it from http://tug.org/mactex)
+% The latest version is available at <http://manas.tungare.name/software/latex/>
+% 
+% Filename: chi-ext.cls
+% 
+% CHANGELOG:
+%   2010-10-18   Manas Tungare      Restored support for \figures.
+%   2010-08-09   Manas Tungare      Updated copyright info for CHI 2011
+%   2009-12-04   Stephen Voida      Updated copyright info for CHI 2010
+%   2008-11-25   Manas Tungare      Initial create.
+%   2009-11-17   Manas Tungare      Refactored the title & author sections.
+% 
+% LICENSE:
+%   Public domain: You are free to do whatever you want with this template.
+%   If you improve this in any way, please drop me a note <manas@tungare.name>,
+%   so I can share the updates with everyone.
+%   
+%   PLEASE RECONSIDER BEFORE FORKING THIS TEMPLATE; there are already
+%   several versions of the chiproceedings template for no good reason.
+%   DO NOT REDISTRIBUTE THIS FILE UNDER A DIFFERENT FILENAME unless you
+%   have a very good reason to change its name.
 
-\documentclass{acm_proc_article-sp}
-
-\begin{document}
+\documentclass{chi-ext}
 
 \title{Towards electronic digital music practice for neurodiverse people}
-% \title{A Sample {\ttlit ACM} SIG Proceedings Paper in LaTeX Format\titlenote{(Does NOT produce the permission block, copyright information nor page numbering). For use with ACM\_PROC\_ARTICLE-SP.CLS. Supported by ACM.}}
-% \subtitle{[Extended Abstract]
-% \titlenote{}
-%
-% You need the command \numberofauthors to handle the 'placement
-% and alignment' of the authors beneath the title.
-%
-% For aesthetic reasons, we recommend 'three authors at a time'
-% i.e. three 'name/affiliation blocks' be placed beneath the title.
-%
-% NOTE: You are NOT restricted in how many 'rows' of
-% "name/affiliations" may appear. We just ask that you restrict
-% the number of 'columns' to three.
-%
-% Because of the available 'opening page real-estate'
-% we ask you to refrain from putting more than six authors
-% (two rows with three columns) beneath the article title.
-% More than six makes the first-page appear very cluttered indeed.
-%
-% Use the \alignauthor commands to handle the names
-% and affiliations for an 'aesthetic maximum' of six authors.
-% Add names, affiliations, addresses for
-% the seventh etc. author(s) as the argument for the
-% \additionalauthors command.
-% These 'additional authors' will be output/set for you
-% without further effort on your part as the last section in
-% the body of your article BEFORE References or any Appendices.
 
-\numberofauthors{6} %  in this sample file, there are a *total*
-% of EIGHT authors. SIX appear on the 'first-page' (for formatting
-% reasons) and the remaining two appear in the \additionalauthors section.
-%
 \author{
-% You can go ahead and credit any number of authors here,
-% e.g. one 'row of three' or two rows (consisting of one row of three
-% and a second row of one, two or three).
-%
-% The command \alignauthor (no curly braces needed) should
-% precede each author name, affiliation/snail-mail address and
-% e-mail address. Additionally, tag each line of
-% affiliation/address with \affaddr, and tag the
-% e-mail address with \email.
-%
-% 1st. author
-\alignauthor
-Till Bovermann\\
-       \affaddr{Department of Media}\\
-       \affaddr{Aalto University}\\
-       \affaddr{Helsinki}\\
-       \email{till.bovermann@aalto.fi}
-% 2nd. author
-\alignauthor
-Julian Parker\\
-       \affaddr{Department of Signal Processing and Acoustics}\\
-       \affaddr{Aalto University}\\
-       \affaddr{Helsinki}\\
-       \email{julian.parker@aalto.fi}
-% 3rd. author
-\alignauthor Ramyah Gowrishankar\\
-       \affaddr{Department of Design}\\
-       \affaddr{Aalto University}\\
-       \affaddr{Helsinki}\\
-       \email{ramyah.gowrishankar@aalto.fi}
-\and  % use '\and' if you need 'another row' of author names
-% 4th. author
-\alignauthor Mila Moisio\\
-       \affaddr{TAUKO}\\
-       \affaddr{Helsinki}\\
-       % \affaddr{}\\
-       \email{mila@taukovaatteet.com}
-% 5th. author
-\alignauthor  Jussi Mikkonen\\
-       \affaddr{Department of Design}\\
-       \affaddr{Aalto University}\\
-       \affaddr{Helsinki}\\
-       \email{jussi.mikonen@aalto.fi}
-% 6th. author
-\alignauthor Vesa Välimäki\\
-       \affaddr{Department of Signal Processing and Acoustics}\\
-       \affaddr{Aalto University}\\
-       \affaddr{Helsinki}\\
-       \email{vesa.valimaki@aalto.fi}
+  \textbf{Till Bovermanṇ} \\
+  AuthorCo, Inc. \\
+  123 Author Ave. \\
+  Authortown, PA 54321 USA \\
+  author1@anotherco.com \\
+  \\
+  \textbf{Second Author} \\
+  VP, Authoring \\
+  Authorship Holdings, Ltd. \\
+  Authors Square \\
+  Authorfordshire, UK AU1 2JD \\
+  author2@author.ac.uk \\
+  \\
+  \textbf{Third Author} \\
+  AnotherCo, Inc. \\
+  123 Another Ave. \\
+  Anothertown, PA 54321 USA \\
+  author3@anotherco.com \\
+  % \\
+  % \textbf{Till Bovermanṇ} \\
+  % AuthorCo, Inc. \\
+  % 123 Author Ave. \\
+  % Authortown, PA 54321 USA \\
+  % author1@anotherco.com \\
+  % \\
+  % \textbf{Second Author} \\
+  % VP, Authoring \\
+  % Authorship Holdings, Ltd. \\
+  % Authors Square \\
+  % Authorfordshire, UK AU1 2JD \\
+  % author2@author.ac.uk \\
+  % \\
+  % \textbf{Third Author} \\
+  % AnotherCo, Inc. \\
+  % 123 Another Ave. \\
+  % Anothertown, PA 54321 USA \\
+  % author3@anotherco.com \\
 }
-% There's nothing stopping you putting the seventh, eighth, etc.
-% author on the opening page (as the 'third row') but we ask,
-% for aesthetic reasons that you place these 'additional authors'
-% in the \additional authors block, viz.
-\date{02.05.2013}
-% Just remember to make sure that the TOTAL number of authors
-% is the number that will appear on the first page PLUS the
-% number that will appear in the \additionalauthors section.
 
+\keywords{Keywords go here.}
+
+\acmclassification{H.5.2 Information Interfaces and Presentation: User interfaces –
+Evaluation/ methodology}
+
+\copyrightinfo{
+  Copyright is held by the author/owner(s). \\
+  \emph{CHI 2011}, May 7--12, 2011, Vancouver, BC, Canada. \\
+  ACM  978-1-4503-0268-5/11/05. \\
+}
+
+% Repeat author names (minus affiliations and addresses) and title here 
+% for PDF metadata.
+\hypersetup{
+  pdfauthor={Till Bovermann, Second Author, Third Author},
+  pdfkeywords={Keyword 1, Keyword 2},
+  pdfsubject={General Subject Area},
+  pdftitle={Paper Title Goes Here},
+}
+
+\begin{document}
 \maketitle
-\begin{abstract}
-	This paper gives an overview on the DEIND project which aims to connect neurodiverse people with the field of contemporary electronic and digital music practice. 
-	In pursuit of this, people with autistic spectrum disorders are invited to take part in the design process of electronic instruments.
 
-	To facilitate music practice, we aim for a holistic instrument experience rather than a modular approach in which the underlying modules of electronic instruments may become too evident and possibly confuse the player too much.
+\begin{multicols}{2}
+  
+\makeauthors
+\makecopyright
 
-	The close integration of target group members encourages a bilateral learning process: on the one hand, there is an intense and fruitful experience for the participants developing, on the other hand, involved researchers will identify design challenges specific to the target group yet very likely reveal new perspectives on the broader view of their respective area of research.
-\end{abstract}
+\section{Abstract}
+This paper gives an overview on the DEIND project which aims to connect neurodiverse people with the field of contemporary electronic and digital music practice. 
 
-% TODO: add categories terms and keywords
+In pursuit of this, people with autistic spectrum disorders are invited to take part in the design process of electronic instruments.
+% To facilitate music practice, we aim for a holistic instrument experience rather than a modular approach in which the underlying modules of electronic instruments may become too evident and possibly confuse the player too much.
 
-% % A category with the (minimum) three required fields
-% \category{H.4}{Information Systems Applications}{Miscellaneous}
-% %A category including the fourth, optional field follows...
-% \category{D.2.8}{Software Engineering}{Metrics}[complexity measures, performance measures]
+The close integration of target group members into the research process encourages a bilateral learning process: on the one hand, there is an intense and fruitful experience for the participants developing, on the other hand, involved researchers will identify design challenges specific to the target group yet very likely reveal new perspectives on the broader view of their respective area of research.
 
-% \terms{Theory}
+\section{Keywords}
+\makeatletter \@keywords \makeatother
 
-% \keywords{ACM proceedings, \LaTeX, text tagging} % NOT required for Proceedings
+\section{ACM Classification Keywords}
+\makeatletter \@acmclassification \makeatother
+
+%--------------------------------------------------------------
 
 \section{Introduction}
 
+Caused by recent technological as well as cultural developments -- cheap electronics, rapid prototyping technologies, respectively the DIY, maker and demo scenes -- the majority of people in the western world are able to creatively express themselves in a multitude of ways. 
+Apart from mainstream hypes such as the hipstamatic phenomenon\footnote{See e.g. \url{http://www.kunsthal.nl/en-22-681-Hipstamatic.html}} the tools for digital content creation as well established social and cultural niches featuring unique expression vocabularies, e.g., embodied by experimental electronic music practice.
 
-The overarching theme of this project is to connect autistics with the field of contemporary electronic and digital music practice. 
-In pursuit of this, people with autistic spectrum disorders (associated with our partner organisations \emph{Nuorten Ystävät} and \emph{Resonaari Music School}) are invited to take part in the design process of electronic instruments. 
-The close integration of target group members ensures on the one hand an intense and fruitful experience for them, on the other hand, it opens the opportunity for the involved researchers to identify challenges that are specific to this group yet reveal new perspectives on the broader view of their research area.
+People with disabilities, however, mostly lack the possibility to take part in such cutting-edge movements: 
+assistive technologies and careful design considerations are often of secondary interest to the designers and developers of the required technology, especially when it comes to the facilitation of cultural niches\footnote{This is by far not caused by bad faith, furthermore grounded in the very constraints inherent to such cutting edge movements}.
 
-Due to its nature, this investigation is laid out in an interdisciplinary manner, interweaving aspects of research in fields as diverse as interaction design, product design, new instruments for musical expression (NIME), music therapy, sound synthesis and computer science. 
-With the current in-house partners (involved are \emph{Department of Media}, \emph{Department of Design} and \emph{Department of Signal Processing and Acoustics}) as well as our external partners (\emph{Nuorten Ystävät} and \emph{Special Music Centre Resonaari}), we cover most of those areas, but plan to extend the list of partners on an international level (e.g. in Germany, the Netherlands and Australia) over the course of the starting grant.
+However, questions remain on how, for example, electronic music practice (\emph{EMP}) can be scaffolded to support people facing challenges in society due to differences in their neurologic development:
+How can \emph{EMP} support them in expressing themselves in an experimental way beyond mainstream? 
+How can it make the engaging nature of \emph{EMP} accessible for them without pressing it into too much guidance?
+Can \emph{EMP} empower them to even shape their own social niche(s) in the above-mentioned sense?
 
-In order to get this larger project started, we hereby apply for support from Aalto Media Factory for the initial phase of the project in the form of infrastructure, expertise and financing. 
-With its help, an initial design iteration will be carried out in which instrument prototypes based on electronically enhanced textiles will be developed.
-Alongside, we aim for attending and organising public events as well as publications in international journals and conference proceedings.
-Additionally, the grant will help to form groundwork for a large-scale research application, possibly on an EU level, involving a collaboration network of international project partners.
+This paper gives insights on how the DEIND project, which aims to connect neurodiverse people with the field of contemporary electronic and digital music practice, approaches these questions.
+In pursuit of this, people with autistic spectrum disorders are invited to take part in the design process of electronic musical instruments. 
+To facilitate music practice, we aim for a holistic instrument experience rather than a modular approach in which the underlying modules of electronic instruments, interface \& mapping \& sound synthesis, would become too evident, possibly interfere with the flow experience. 
+The close integration of target group members into the design cycle encourages a bilateral learning process: 
+On the one hand, there is an intense and fruitful experience for the participants, on the other hand, it opens the opportunity for the involved researchers to identify challenges that are specific to this group yet reveal new perspectives on the broader view of their respective research area.
 
-\section{Project outline and design cycle} % (fold)
+\section{Research objectives}
+\label{sec:research_objectives}
+
+some words about the research objective
+
+\section{Implementation and research methods}
 \label{sec:timeline}
 
-Here, we talk about the members of the group and which skills they contribute.
-Also, the design cycle is introduced and explained.
+%Here, we talk about the members of the group and which skills they contribute.
+%Also, the design cycle is introduced and explained.
 
-% section timeline (end)
+We investigate the above-mentioned research objectives through three work packages. A structural overview of their interrelation is shown in Figure 4; their general intention and content is explained below.
+\begin{description}
+\item[WP1] investigative field work This WP covers the actual work with the target groups and the collection of data on which the other WP’s rely on. Interactive participatory design sessions are conducted in which the participants are introduced to contemporary electronic music and (later on) to the instrument prototypes to be built in WP3. A particular focus lies on playing the instruments and giving the people an opportunity to explore their possibilities. During these sessions, the musical play is recorded and various other research material such as drawings, written comments and interviews is collected.
+The deliverables of this WP are musical recordings, workshop documentations, and, possibly with the help of the recorded material, attendances to public events and international festivals. All this will happen in accordance with the performers.
+\item[WP2] evaluation \& coding, theory building In this WP, the material gathered in WP1 is analysed and put into a broader context by incorporating knowledge gained from background research eventually leading towards a theory of electronic music practice for neurodiverse people.
+The deliverables of this WP are scientific papers for IxD, NIME and Autism related conferences.
+	\item[WP3] conceptual synthesis \& instrument development This WP aims to turn the observations and derived theory of WP1 \& WP2 into practice by (a) turning the theoretical considerations into practical guidelines and (b) creating and altering instrument prototypes that in turn are used in WP1.
+The deliverables of this WP are instrument prototypes and guidelines for the design of electronic instruments to be published at international conferences.
+\end{description}
 
-\section{First iteration} % (fold)
+This project is mainly based on practice-oriented qualitative research methods. Therefore, the project will extensively draw from participatory design and ethnomethodological research methods, which will be adapted to the target groups’ intrinsic character. To fulfil the above-listed objectives, we intend to apply a combination of experimental and theoretical methods that are based on both artistic and scientific research practices. The subsequent list gives an overview on the methods as intended to be used for the work packages. By their combination, new knowledge for specific electronic instruments will be gained, generalised and finally fed back into the respective research areas.
+
+\begin{description}
+	\item[WP1] Adaptation of participatory design workshop methods, focus group sessions, concerts and phenomenological observations of target group members exploring musical possibilities of instruments resulting in interviews, field notes, questionnaires and quantitative measurements.
+	\item[WP2] Grounded theory and phenomenological analysis based on recorded research material combined with background research in related fields.
+	\item[WP3] Rapid software and hardware prototyping, incorporating the Aalto facilities (Aalto MediaFactory, Aalto FabLab, textile-workshop, wood-workshop).
+\end{description}
+
+
+
+
+
+\section{First iteration}
 \label{sec:first_iteration}
 
 In which we give an overview about the first design iteration.
 
-\subsection{initial workshop} % (fold)
+\subsection{initial workshop}
 \label{sub:initial_workshop}
 
 Tells that we had a kick-off meeting with all contributing members followed by a one-day trip to our project partner Nuorten Ystävät in Imatra.
 This was followed by an initial workshop day at which we discussed arising challenges (tell which!).
 
 We came up with possible ideas for the system design (give examples for the prototype ideas and why they were considered).
-% subsection initial_workshop (end)
 
-\subsection{instrument prototyping} % (fold)
+
+\subsection{instrument prototyping}
 \label{sub:instrument_prototyping}
 
 We decided to develop two of the many ideas further, namely he rhythmical interaction part and the idea on room modes.
 
-\subsubsection{audio prototyping} % (fold)
+\subsubsection{audio prototyping}
 \label{ssub:audio_prototyping}
 
 Reports on the two to seventeen audio prototypes we did: 
 the ambient system (complexRes), the FM matrix, the autoLoopPointer, the diodeRing, the noiseRing
 % subsubsection audio_prototyping (end)
 
-\subsection{sensor prototyping} % (fold)
+\subsubsection{sensor prototyping}
 \label{sub:sensor_prototyping}
 reports on the different sensors we looked at, e.g. switchDesigns (floor plan, imatra map)
-% subsection sensor_prototyping (end)
 
-\subsubsection{interface prototyping} % (fold)
+
+\subsubsection{interface prototyping}
 \label{ssub:interface_prototyping}
 
 Mentions (again) that we're focusing mainly on textile-based interfaces.
@@ -209,48 +203,55 @@ We did an initial interface design with \emph{conductive fur}.
 We describe conductive fur, how we anticipated its usage, how it feels and how it works.
 We as well give sound examples on how it sounds with and without added effects.
 
-% subsubsection interface_prototyping (end)
-% subsection instrument_prototyping (end)
+\subsubsection{sonic environments}
+\label{ssub:sonic_environments}
 
-\subsection{field trip} % (fold)
+Contact microphone attached to the ventilation outlet to capture its vibrations.
+FM synthesis
+
+\subsection{field trip}
 \label{sub:field_trip}
 
-We tell about the first field trip top Imatra and what happened there, namely five days of intense listening sessions.
+We tell about the first field trip to Imatra and what happened there, namely five days of intense listening sessions.
 We further explain the general day layout and that we tried to fit our interventions into it.
 Also quite important is that we actually wanted to keep the fun factor in the equation: it should not be difficult, no heavy learning process should be involved. Why? Because the goal of the project is music practice not music therapy or learning.
 
 The people there are different. Different in the sense that they value other things than I expect from someone on the street.
 
 
-% subsection field_trip (end)
 
-\subsubsection{general impressions made on the field trip} % (fold)
+
+\subsubsection{general impressions made on the field trip}
 \label{ssub:general_impressions_made_on_the_field_trip}
 
 look at notes made in Imatra and report those as general observations.
 
 
 % subsubsection general_impressions_made_on_the_field_trip (end)
-\subsection{data analysis} % (fold)
+\subsection{data analysis}
 \label{sub:data_analysis}
 
 describe what can be observed in the video session with participant 1 (rhythmical patterns).
 
 
-% subsection data_analysis (end)
 
-\subsection{lessons learned} % (fold)
+
+\subsection{lessons learned}
 \label{sub:lessons_learned}
 
 oh my. so many.
+e.g. 
+slowness,
+security,
 
 
-% subsection lessons_learned (end)
+
+
 
 
 % section first_iteration (end)
 
-\section{Conclusion and outlook} % (fold)
+\section{Conclusion and outlook}
 \label{sec:conclusion_and_outlook}
 
 % section conclusion_and_outlook (end)
@@ -267,6 +268,7 @@ This research was part of the DEIND project on designing electronic instruments 
 
 \bibliographystyle{abbrv}
 \bibliography{/Users/tboverma/Public/unpub/BibTeX/bovermann} 
-\balancecolumns
-% That's all folks!
+
+\end{multicols}
+
 \end{document}
